@@ -1,0 +1,10 @@
+{
+  "name": "pi-wrap-aware-home-end",
+  "version": "1.0.0",
+  "description": "Wrap-aware Home/End navigation for pi's editor",
+  "license": "MIT",
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./index.ts"]
+  }
+}

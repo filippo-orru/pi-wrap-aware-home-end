@@ -6,15 +6,17 @@ The first press moves to the start or end of the current visual (wrapped) line. 
 
 ## Install
 
-Clone the repository into pi's user extensions directory:
+Install with pi's package manager:
 
 ```sh
-mkdir -p ~/.pi/agent/extensions
-git clone https://github.com/filippo-orru/pi-wrap-aware-home-end.git \
-  ~/.pi/agent/extensions/pi-wrap-aware-home-end
+pi install git:github.com/filippo-orru/pi-wrap-aware-home-end
 ```
 
-Restart pi, or run `/reload` in an existing session. Pi automatically loads the extension's `index.ts`; no build step is needed.
+This installs the extension for all your projects. Add `--local` to install it for the current project only.
+
+Restart pi, or run `/reload` in an existing session. No build step is needed.
+
+If you previously cloned this repository into `~/.pi/agent/extensions/`, move that checkout outside the extensions directory before installing the managed package to avoid loading the extension twice.
 
 ### Try without installing
 
@@ -27,7 +29,7 @@ pi --extension ~/dev/pi-wrap-aware-home-end/index.ts
 ## Update
 
 ```sh
-git -C ~/.pi/agent/extensions/pi-wrap-aware-home-end pull
+pi update git:github.com/filippo-orru/pi-wrap-aware-home-end
 ```
 
-Then restart pi or run `/reload`.
+Or update all managed packages with `pi update --extensions`. Then restart pi or run `/reload`.
